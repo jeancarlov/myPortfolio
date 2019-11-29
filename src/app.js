@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
+// Rule: don't modify the state directly within react, use setState to modify the state component
 // previous notes are in previous commits
-// use toggle this play to refactor the helper methods => readMore() and Showless 
+// use the bind method to bind the this object from the component to the helper method 
+// use toggleDisplaybio this play to refactor the helper methods => readMore() and Showless 
 
 class App extends Component {
     constructor(){
@@ -9,19 +10,15 @@ class App extends Component {
        this.state = { displayBio: false }; 
        // console.log('component this', this);
        
-       this.readMore =this.readMore.bind(this);
+       this.toggleDisplayBio =this.toggleDisplayBio.bind(this);
     }
-    // helper method
-    readMore(){
-        console.log('readmore this wuth the bind method in practice', this);
-        this.setState({ displayBio: true });
+    // helper methods got refactor to toggleDisplay bio
+    // make sure toggleDisplayBio has access to the this object from the component
+    // use the bind method for toggletDisplay to access the this object from the component
+    
+    toggleDisplayBio(){
+        this.setState({ displayBio : !this.state.displayBio });
     }
-
-    showLess(){
-        this.setState({ displayBio : false})
-    }
-
-    //toggleDisplayBio
 
     render() {
 
@@ -36,10 +33,11 @@ class App extends Component {
                             <p>I live in greater Orlando Area, and code almost everyday.</p>
                             <p> My favorite language so far is python but I am currently reactiving my love for ECMASript</p>
                             <p> Besides coding, I love reading and working out for wellbeing</p>
+                            <button onClick={this.toggleDisplayBio}>Showless </button>
                         </div>
                     ) : (
                         <div>
-                            <button on onClick={this.readMore}> Read more</button>
+                            <button on onClick={this.toggleDisplayBio}> Read more</button>
                         </div>
                     )
                 }
