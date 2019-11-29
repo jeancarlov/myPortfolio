@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
-// add a contructor key method and it gets fire when an instance of a class is create
-// the constructor is use to attach a state object to the component using the (this)
-// if the state object is undefined use the (super() ) to invoke the parent classes of the constructor method 
-// state is add to control the display of bio
-// change the null value  for jsx
-// us ethe setStaste to update the values of a state
+// previous notes are in previous commits
+// use toggle this play to refactor the helper methods => readMore() and Showless 
 
 class App extends Component {
     constructor(){
@@ -13,12 +9,20 @@ class App extends Component {
        this.state = { displayBio: false }; 
        // console.log('component this', this);
        
-       this.readMore = ()=> {
-        // console.log('readMore this', this);
-        
-        this.setState({ displayBio: true});
-       }
+       this.readMore =this.readMore.bind(this);
     }
+    // helper method
+    readMore(){
+        console.log('readmore this wuth the bind method in practice', this);
+        this.setState({ displayBio: true });
+    }
+
+    showLess(){
+        this.setState({ displayBio : false})
+    }
+
+    //toggleDisplayBio
+
     render() {
 
         return(
