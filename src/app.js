@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
+import SocialProfiles from './SocialProfiles';
+
 // Rule: don't modify the state directly within react, use setState to modify the state component
 // previous notes are in previous commits
 // Its best practice to use the class property and initializer syntax in order to initialize a method with in the component
@@ -37,6 +39,9 @@ class App extends Component {
                 }
                 <hr />
                 <Projects />
+                <hr />
+                <SocialProfiles />
+                
         </div>  
         )
     }
