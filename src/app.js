@@ -8,12 +8,12 @@ import React, { Component } from 'react';
 class App extends Component {
     // Class property and initializer syntax is a way to attach properties and methods to the (this) object of a class without having to use the a constructor
     state = { displayBio: false};
-    // we the anizializer I can now use the an arrow function to call the this.setstate 
+    // with the initializer I can now use the an arrow function to call the this.setstate 
     toggleDisplayBio = () => {
         this.setState({ displayBio : !this.state.displayBio });
     }
 
-    render = () => {
+    render () {
 
         return(
          <div>
