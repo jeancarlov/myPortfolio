@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
 // Rule: don't modify the state directly within react, use setState to modify the state component
 // previous notes are in previous commits
-// use the bind method to bind the this object from the component to the helper method 
-// use toggleDisplaybio this play to refactor the helper methods => readMore() and Showless 
-
+// Its best practice to use the class property and initializer syntax in order to initialize a method with in the component
+// Use the class property and initializer syntax to refactor the constructor
+// use the bind method for toggletDisplay to access the this object from the component
+// note use the setState method because React make changes to setState before it triggers the render()
 class App extends Component {
-    constructor(){
-    super();
-       this.state = { displayBio: false }; 
-       // console.log('component this', this);
-       
-       this.toggleDisplayBio =this.toggleDisplayBio.bind(this);
-    }
-    // helper methods got refactor to toggleDisplay bio
-    // make sure toggleDisplayBio has access to the this object from the component
-    // use the bind method for toggletDisplay to access the this object from the component
-    
-    toggleDisplayBio(){
+    // Class property and initializer syntax is a way to attach properties and methods to the (this) object of a class without having to use the a constructor
+    state = { displayBio: false};
+    // we the anizializer I can now use the an arrow function to call the this.setstate 
+    toggleDisplayBio = () => {
         this.setState({ displayBio : !this.state.displayBio });
     }
 
-    render() {
+    render = () => {
 
         return(
          <div>
