@@ -18,9 +18,13 @@ class Title extends Component{
 
         this.animateTiles();
     }
+    componentWillUnmount(){
+        console.log('Title component will unmount');
+        
+    }
     animateTiles= () => {
         setInterval (() => {
-            const titleIndex = this.state.titleIndex + 1;
+            const titleIndex = (this.state.titleIndex + 1) % TITLES.length;
 
             this.setState({ titleIndex });
         }, 4000);
