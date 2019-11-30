@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
 import jcvpic from './assets/jcvpic.jpg';
+import Title from './Title';
 
 // Rule: don't modify the state directly within react, use setState to modify the state component
 // previous notes are in previous commits
@@ -24,7 +25,9 @@ class App extends Component {
                 <img src={jcvpic} alt= 'profile' className='jcvpic' />
                 <h1> Hello!</h1>
                 <p>My name is Jean Carlo Valderrama</p> 
+                <Title />
                 <p> I enjoy coding as a habit</p>
+               
                 {
                     this.state.displayBio ? (
                         <div>
