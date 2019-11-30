@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PROJECTS from './data/projects';
+import PROJECTS from '../data/projects';
 
 // Use js destructuring to access the this.props.project.title,description, image for code efficiency
 class Project extends Component{

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
-import jcvpic from './assets/jcvpic.jpg';
+import jcvpic from '../assets/jcvpic.jpg';
 import Title from './Title';
 
 // Rule: don't modify the state directly within react, use setState to modify the state component
