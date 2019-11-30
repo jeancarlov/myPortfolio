@@ -1,42 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PROJECTS from '../data/projects';
 
-// Use js destructuring to access the this.props.project.title,description, image for code efficiency
-class Project extends Component{
-    render() {
-        //console.log('this.props', this.props);
-        const { title, image, description, link } =this.props.project;
+// stateless functional component, notice that props became the input in the stateless fn component also because there is not need to use this when arrow fn is in play 
+// notice that a component that doesn't have state can be turn into stateless syntax 
+const Project = props => {
+    const { title, image, description, link } =props.project;
 
-        return (
-            <div style={{ display: 'inline-block', width: 300, margin: 10}}>
-                <h3>{title}</h3>
-                <img src={image} alt= 'profile' style= {{width: 200, height: 120}}/>
-                <p>{description}</p>
-                <a href = {link}>{link}</a>
-            </div>
-        )
-    }
+    return (
+        <div style={{ display: 'inline-block', width: 300, margin: 10}}>
+            <h3>{title}</h3>
+            <img src={image} alt= 'profile' style= {{width: 200, height: 120}}/>
+            <p>{description}</p>
+            <a href = {link}>{link}</a>
+        </div>
+    )
 }
+
  // Note: Props is a way for parent components to pass(data) to child components
  // Creat a key attribute to pass PROJECT.id and project attribute to pass the entire PROJECT index from the map(PROJECT)
  // notice that the project attribute is the same as the value from this.props.project.title because its the way props work
-class Projects extends Component {
-    render(){
-        return(
-            <div>
-                <h2> Highlighted Projects</h2>
-                <div>
-                    {
-                        PROJECTS.map((PROJECT) => {
-                            return(
-                               <Project key={PROJECT.id} project={PROJECT} />
-                            );
-                        })
-                    }
-                </div>
-            </div>
-        )
-    }
-}
+const Projects = () => (
+    <div>
+        <h2> Highlighted Projects</h2>
+        <div>
+            {
+                PROJECTS.map((PROJECT) => (
+                    <Project key={PROJECT.id} project={PROJECT} />
+                ))
+            }
+        </div>
+    </div>
+)
+
 
 export default Projects;
