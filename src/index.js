@@ -7,6 +7,7 @@ import './index.css';
 
 
 // since history is only use ones then its going to be refactor to be inline with the history call in Router
+// Header component is created to give users a way to move around all the route links in the app
 ReactDOM.render(
     <Router history={createBrowserHistory()}>
         <Switch>

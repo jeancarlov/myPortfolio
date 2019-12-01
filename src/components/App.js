@@ -3,6 +3,7 @@ import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
 import jcvpic from '../assets/jcvpic.jpg';
 import Title from './Title';
+import Header from './Header';
 
 // Rule: don't modify the state directly within react, use setState to modify the state component
 // previous notes are in previous commits
@@ -22,6 +23,7 @@ class App extends Component {
 
         return(
          <div>
+                <Header />
                 <img src={jcvpic} alt= 'profile' className='jcvpic' />
                 <h1> Hello!</h1>
                 <p>My name is Jean Carlo Valderrama</p> 
