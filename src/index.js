@@ -5,10 +5,10 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import App from './components/App';
 import './index.css';
 
-const history = createBrowserHistory();
 
+// since history is only use ones then its going to be refactor to be inline with the history call in Router
 ReactDOM.render(
-    <Router history={history}>
+    <Router history={createBrowserHistory()}>
         <Switch>
             <Route path='/' component={App} />
         </Switch>
