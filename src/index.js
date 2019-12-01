@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Router, Switch, Route } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import App from './components/App';
+import Header from './components/Header';
+
 import './index.css';
 
 
@@ -11,10 +13,15 @@ import './index.css';
 ReactDOM.render(
     <Router history={createBrowserHistory()}>
         <Switch>
-            <Route path='/' component={App} />
+            <Route exact path='/' render={() => <Header Component={App} />} />
         </Switch>
     </Router>,
      document.getElementById('root')
      );
 
 
+     const AppWithHeader = () => {
+        return(
+            <Header Component= {App} />
+        )
+    }

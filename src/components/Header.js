@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = props => {
+    const { Component } = props;
     const style = {
         display: 'inline-block',
         margin: 10,
@@ -9,8 +10,13 @@ const Header = () => {
     };
     return(
         <div>
-        <h3 style={style}><Link to='/'>Home</Link></h3>
+            <div>
+            <h3 style={style}><Link to='/'>Home</Link></h3>
+            </div>
+            <Component />
+        
         </div>
+        
     )
 }
 
