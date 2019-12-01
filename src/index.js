@@ -10,22 +10,16 @@ import './index.css';
 
 // since history is only use ones then its going to be refactor to be inline with the history call in Router
 // Header component is created to give users a way to move around all the route links in the app
+//Use a render property to make a callback function which can return JSX rather than a component name itself 
 ReactDOM.render(
     <Router history={createBrowserHistory()}>
         <Switch>
-            <Route exact path='/' render={() => <Header Component={App} />} />
+            <Route exact path='/' render={() => <Header><App /></Header>} />
         </Switch>
     </Router>,
      document.getElementById('root')
      );
 
+    
 
-     const AppWithHeader = () => {
-        return(
-            <Header Component= {App} />
-        )
-    }
-
-    //higher order component example:
-    //Whereas a component transforms props into UI, a higher-order component transforms a component into another component.
-    const EnhancedComponent = higherOrderComponent(WrappedComponent);
+    
