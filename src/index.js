@@ -25,3 +25,7 @@ ReactDOM.render(
             <Header Component= {App} />
         )
     }
+
+    //higher order component example:
+    //Whereas a component transforms props into UI, a higher-order component transforms a component into another component.
+    const EnhancedComponent = higherOrderComponent(WrappedComponent);
