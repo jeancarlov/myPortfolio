@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 const TITLES = [
+    'University of Central Florida grad 2018',
     'a Code lover',
     'a Book reader',
     'a Soccer player',

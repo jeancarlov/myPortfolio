@@ -3,6 +3,7 @@ import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
 import jcvpic from '../assets/jcvpic.jpg';
 import Title from './Title';
+import Weather from './Weather';
 
 
 // Rule: don't modify the state directly within react, use setState to modify the state component
@@ -47,6 +48,8 @@ class App extends Component {
                 <Projects />
                 <hr />
                 <SocialProfiles />
+                <hr />
+                <Weather />
                 
         </div>  
         )
