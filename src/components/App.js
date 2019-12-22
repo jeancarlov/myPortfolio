@@ -24,7 +24,7 @@ class App extends Component {
         return(
          <div>
                 
-                <img src={jcvpic} alt= 'profile' className='jcvpic' />
+                <img src={jcvpic} alt= 'profile' className='jcvpic' style= {{width: 100, height: 100}} />
                 <h1> Hello!</h1>
                 <p>My name is Jean Carlo Valderrama</p> 
                 <Title />

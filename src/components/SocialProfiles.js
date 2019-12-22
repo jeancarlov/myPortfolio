@@ -4,8 +4,10 @@ import SOCIAL_PROFILES from '../data/socialProfiles';
 const SocialProfile = props => {
         const { link, image } = props.socialProfile;
         return(
+            <div style={{ display: 'inline-block', width: 400, margin: 10}}>
             <div>
             <a href= {link}><img src= {image} alt='social-profiles' style={{ width: 35, height: 35, margin: 10 }}/></a>
+            </div>
             </div>
         )
 }
