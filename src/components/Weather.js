@@ -1,45 +1,34 @@
 import React, { Component} from 'react';
 
+const  Temp =({ city: { id, name } }) => (
+    <p style={{ margin: 20 }}>{id} <em>{name}</em></p>
+  )
 class Weather extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          error: null,
-          isLoaded: false,
-          cities: []
-        };
-      }
+    state = { city: {}, cities: []}
 
-    componentDidMount(){
-        fetch('api.openweathermap.org/data/2.5/weather?q=Orlando,US&appid=d3fb420c795be29b9317c50947d0c70a&units=imperial')
-        .then(res => console.log('response', res)
-        )
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-           
-          });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
-  }
+    componentDidMount() {
+        fetch('api.openweathermap.org/data/2.5/weather?q=Orlando,US&appid={key}a&units=imperial')
+          .then(response => response.json())
+          .then(json => this.setState({ city: json }))
+          .catch(error => alert(error.message));
+      }
     
+      fetchJokes = () => {
+        fetch('api.openweathermap.org/data/2.5/weather?q=Orlando,US&appid={key}a&units=imperial')
+          .then(response => response.json())
+          .then(json => this.setState({ cities: json }))
+          .catch(error => alert(error.message));
+      }
 
     render() {
         return(
-            <div>Cities</div>
+            <div>
+            <h2>Highlighted Joke</h2>
+            <Weather city={this.state.city} />
+            <hr />
+          </div>
         )
     }
 }
 
 export default Weather
-
