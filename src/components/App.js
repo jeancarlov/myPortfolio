@@ -10,7 +10,7 @@ import WeatherTwo from "../components/WeatherTwo"
 
 
 
-const API_KEY = "key";
+const API_KEY = "d3fb420c795be29b9317c50947d0c70a";
 // Rule: don't modify the state directly within react, use setState to modify the state component
 // previous notes are in previous commits
 // Its best practice to use the class property and initializer syntax in order to initialize a method with in the component
@@ -73,9 +73,11 @@ class App extends Component {
                 {
                     this.state.displayBio ? (
                         <div>
-                            <p>I live in greater Orlando Area, and code almost everyday.</p>
-                            <p> My favorite language so far is python but I am currently reactiving my love for ECMASript</p>
+                            <p> I live in greater Orlando area, and code almost everyday.</p>
+                            <p> My favorite language so far is Python but I am currently reactiving my love for ECMAScript</p>
                             <p> Besides coding, I love reading and working out for wellbeing</p>
+                            <p> I am an advocator of mental awareness </p>
+                            <p> My skills are concentraded in  Finance, Economics, and Programming </p>
                             <button onClick={this.toggleDisplayBio}>Showless </button>
                         </div>
                     ) : (

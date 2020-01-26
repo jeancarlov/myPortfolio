@@ -4,15 +4,20 @@ import PROJECTS from '../data/projects';
 // stateless functional component, notice that props became the input in the stateless fn component also because there is not need to use this when arrow fn is in play 
 // notice that a component that doesn't have state can be turn into stateless syntax 
 const Project = props => {
-    const { title, image, description, link } =props.project;
+    const { title, image, description, link, website } =props.project;
 
     return (
+       
         <div style={{ display: 'inline-block', width: 400, margin: 10}}>
             <h3>{title}</h3>
             <img src={image} alt= 'profile' style= {{width: 200, height: 120}}/>
             <p>{description}</p>
+            <a href = {website}>{website}</a>
+            <br></br>
             <a href = {link}>{link}</a>
+            
         </div>
+      
     )
 }
 

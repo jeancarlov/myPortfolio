@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 const TITLES = [
-    'University of Central Florida grad 2018',
-    'a Code lover',
-    'a Book reader',
-    'a Soccer player',
-    'a Gym guy',
-    'a Passionate about life',
-    'a Life is interesting'
+    'University of Central Florida graduate 2018',
+    'a code lover',
+    'a book reader(the Art of Scalbility)',
+    'a soccer player',
+    'a gym guy',
+    'a passionate about life',
+    'a life is interesting'
 ]
 
 class Title extends Component{
