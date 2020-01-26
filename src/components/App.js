@@ -7,6 +7,8 @@ import Jokes from './Jokes';
 import Form from "../components/Form";
 import WeatherTitles from "../components/WeatherTiles"
 import WeatherTwo from "../components/WeatherTwo"
+import { Container, Row } from 'react-bootstrap';
+
 
 
 
@@ -63,6 +65,8 @@ class App extends Component {
     render () {
 
         return(
+        <React.Fragment>
+        
          <div>
                 
                 <img src={jcvpic} alt= 'profile' className='jcvpic' style= {{width: 200, height: 200, }} />
@@ -86,6 +90,7 @@ class App extends Component {
                         </div>
                     )
                 }
+               
                 <hr />
                 <Projects />
                 <hr />
@@ -109,6 +114,8 @@ class App extends Component {
                 
                 
         </div>  
+        
+        </React.Fragment>
         )
     }
 }

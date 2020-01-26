@@ -3,6 +3,8 @@ import project2 from '../assets/SiteTDD-Docker-Image.png';
 import project3 from '../assets/Project-Python-TravisCI-Image.png';
 import project4 from '../assets/Cristal-Collector-Game-Image.png';
 
+
+
 // SCREAM CASE syntax is in the varible PROJECTS, for global variables
 // Add id to each object in the array to identify each obj separately
 const PROJECTS = [
@@ -54,5 +56,7 @@ const PROJECTS = [
     //     image: project3
     // }
 ];
+
+
 
 export default PROJECTS
