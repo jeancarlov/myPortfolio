@@ -12,9 +12,9 @@ const Project = props => {
             <h3>{title}</h3>
             <img src={image} alt= 'profile' style= {{width: 200, height: 120}}/>
             <p>{description}</p>
-            <a href = {website}>{website}</a>
+            <a target="_blank" href = {website}>{website}</a>
             <br></br>
-            <a href = {link}>{link}</a>
+            <a target="_blank" href = {link}>{link}</a>
             
         </div>
       
